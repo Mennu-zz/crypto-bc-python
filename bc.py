@@ -29,6 +29,7 @@ def add_transaction(recipient, sender=owner, amount = 1.00):
 def mine_block():
     last_block = blockchain[-1]
     hashed_block = ''
+
     for key in last_block:
          value = last_block[key]
          hashed_block += str(value)
@@ -38,6 +39,7 @@ def mine_block():
         'index': len(blockchain),
         'transactions': open_transaction
         }
+    
     blockchain.append(block)
 
 
